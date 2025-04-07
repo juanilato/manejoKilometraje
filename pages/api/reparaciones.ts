@@ -1,8 +1,8 @@
 // pages/api/reparaciones.ts
-import { PrismaClient } from "@prisma/client";
+import { prisma } from '../../lib/prisma'; 
 import { NextApiRequest, NextApiResponse } from "next";
 import { sendTelegramMessage } from "../../lib/sendTelegramMessage";
-const prisma = new PrismaClient();
+
 
 interface ReparacionRequestBody {
     fecha: string;

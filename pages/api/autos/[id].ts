@@ -1,7 +1,7 @@
-import { PrismaClient } from '@prisma/client';
+import { prisma } from '../../../lib/prisma'; 
 import { NextApiRequest, NextApiResponse } from 'next';
 import {sendTelegramMessage} from '../../../lib/sendTelegramMessage'
-const prisma = new PrismaClient();
+
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const id = parseInt(req.query.id as string);
